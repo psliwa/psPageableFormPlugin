@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0         http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd" version="2.0">
+  <name>psPageableFormPlugin</name>
+  <channel>plugins.symfony-project.org</channel>
+  <summary>Pageable form library</summary>
+  <description>Provides pageable (multipage) form functionality</description>
+  <lead>
+    <name>Piotr Sliwa</name>
+    <user>psliwa</user>
+    <email>peter.pl7@gmail.com</email>
+    <active>yes</active>
+  </lead>
+  <date>2011-01-18</date>
+  <time>21:44:41</time>
+  <version>
+    <release>1.2.0</release>
+    <api>1.2.0</api>
+  </version>
+  <stability>
+    <release>stable</release>
+    <api>stable</api>
+  </stability>
+  <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
+  <notes>better documentation</notes>
+  <contents>
+    <dir name="/" baseinstalldir="psPageableFormPlugin">
+      <file name="LICENSE" role="php" md5sum="79e260fb306ab16efc6b64caa84705ea"/>
+      <file name="README" role="php" md5sum="298fab7a9cdea0c3ffce6a286b665b73"/>
+      <dir name="config">
+        <file name="schema.yml" role="php" md5sum="5ea8f550823605a687fb9bbb49f97570"/>
+      </dir>
+      <dir name="lib">
+        <dir name="form">
+          <dir name="persistance">
+            <file name="psPageableFormDatabasePersistanceStrategy.class.php" role="php" md5sum="cb1997ce8196248df797be12035c45dc"/>
+            <file name="psPageableFormPersistanceStrategy.class.php" role="php" md5sum="93839cd913dc100481c34b6208cba930"/>
+            <file name="psPageableFormPostPersistanceStrategy.class.php" role="php" md5sum="cba147964d4c6eeaf5d38858d764abab"/>
+            <file name="psPageableFormSessionPersistanceStrategy.class.php" role="php" md5sum="b83c48d567e2461d896fb3cd3f28983d"/>
+          </dir>
+          <file name="psPageableForm.class.php" role="php" md5sum="6cbf3817b887ef9f7258261713f8ad4e"/>
+          <file name="psPageableFormProcess.class.php" role="php" md5sum="3f868330e458900b842415adba5cfb98"/>
+        </dir>
+        <dir name="model">
+          <dir name="base">
+            <file name="BasepsPageableFormPersistance.class.php" role="php" md5sum="45a9ed8ea8650e2e18a11f7f6820668b"/>
+          </dir>
+          <file name="psPageableFormPersistance.class.php" role="php" md5sum="6fc3a6f44cbc3bf3e8dc6e6e9ff36020"/>
+          <file name="psPageableFormPersistanceTable.class.php" role="php" md5sum="969408d2884a7075556999fc1c7ca56d"/>
+        </dir>
+      </dir>
+      <file name="package.xml" role="php" md5sum="17d86f33d8270571d108907ef90cb895"/>
+      <dir name="test">
+        <file name="TestFormClasses.php" role="php" md5sum="b82938023ffa35fd0dd523a90efde8e8"/>
+        <file name="bootstrap.php" role="php" md5sum="82c8d09f138351626d0134424e18e297"/>
+        <file name="psPageableFormProcessTest.php" role="php" md5sum="1d0a2139295ed2b756768692c3251f6b"/>
+        <file name="psPageableFormSessionPersistanceStrategyTest.php" role="php" md5sum="f47082930092c1eee5e7f8cec1d05db1"/>
+        <file name="psPageableFormTest.php" role="php" md5sum="eb3a442b36d402f0d79bedb113a08b58"/>
+        <dir name="session">
+        </dir>
+      </dir>
+    </dir>
+  </contents>
+  <dependencies>
+    <required>
+      <php>
+        <min>5.0.0</min>
+      </php>
+      <pearinstaller>
+        <min>1.4.0</min>
+      </pearinstaller>
+      <package>
+        <name>symfony</name>
+        <channel>pear.symfony-project.com</channel>
+        <min>1.2.0</min>
+        <max>2.0.0</max>
+        <exclude>2.0.0</exclude>
+      </package>
+    </required>
+  </dependencies>
+  <phprelease/>
+  <changelog>
+    <release>
+      <version>
+        <release>1.0.1</release>
+        <api>1.0.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <date>2010-07-16</date>
+      <notes>
+        Initial release.
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>1.0.2</release>
+        <api>1.0.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <date>2010-08-08</date>
+      <notes>
+        better documentation.
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>1.0.3</release>
+        <api>1.0.1</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <date>2010-08-15</date>
+      <notes>
+        * remove callback parameter from psPageableFormProcess constructor
+		* psPageableFormProcess::process returns true if form is fully valid, otherwise false
+		* tests update
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>1.1.0</release>
+        <api>1.1.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <date>2010-10-16</date>
+      <notes>
+        * third constructor parameter for session persistance strategy class (forceClean), fix one bug (parametrized "name" constructor parameter)
+		* tests for psPageableFormSessionPersistanceStrategy
+		* adds new style of adding forms to pageable form (via creation data) - more in README examples
+		* few new tests
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>1.2.0</release>
+        <api>1.2.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <date>2011-01-18</date>
+      <notes>
+        * psPageableForm::mergeForm() method
+		* Small change in psPageableForm::bind implementation, first forms from previous steps are validated, then current form's default values are set.
+		* generalizing psPageableFormProcess class, change request parameter type - can by array or ArrayAccess object (include sfRequest object). Add fourth construct's parameter.
+		* change visibility of psPageableForm::getValuesForForm() from private to protected.
+		* TODO: 1. implementation of psPageableForm::embedForm() method, 2. think about optimalize validation forms from previous steps (skip validation for some persistance strategy?)
+      </notes>
+    </release>
+  </changelog>
+</package>
